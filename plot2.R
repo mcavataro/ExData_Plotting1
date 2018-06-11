@@ -5,6 +5,7 @@ library(lubridate)
 if(!file.exists("./data")){dir.create("./data")}
 fileUrl <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 download.file(fileUrl,destfile="./data/Dataset.zip")
+unzip("./data/Dataset.zip")
 
 #read in the data
 pwr <- read.table("./household_power_consumption.txt",header = TRUE,sep=";")
